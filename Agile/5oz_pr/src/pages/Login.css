@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,700&display=swap');
+
+.login-layout {
+    display: flex;
+    justify-content: center;
+    background-color: #f1efe9;
+    height: 100vh;
+    align-items: center;
+}
+
+.login-all{
+    background-color: #d8edf5;
+    margin-left:auto;
+    margin-right: auto;
+    width:800px;
+    height: 450px;
+    box-shadow: 1px 1px 20px #e4e6ea;
+    border-radius: 30px;
+    
+
+     /* 미디어 쿼리 추가 */
+  @media screen and (max-width: 768px) {
+    width: 350px;
+    height: 400px;
+    margin-top:30%;
+  }
+}
+
+.login-logo{
+    font-family: 'Vollkorn', serif;
+    font-size: 60px;
+    height: 90px;
+    color: rgba(0, 0, 0, 0.863);
+    margin-top: 35px;
+    margin-left:15%;
+    
+}
+
+
+.form {
+    width: 25%;
+    margin-top: 40px;
+    margin-left: 8%;
+    float:left;
+}
+
+
+
+.btn-log {
+    float: left;
+    margin-top: 13%;
+    background-color: rgb(80, 183, 252);
+    border-color:rgb(80, 183, 252);
+}
+
+.btn-signup {
+    float: left;
+    margin-left: 27%;
+    margin-top: 13%;
+    background-color: rgb(80, 183, 252);
+    border-color:rgb(80, 183, 252);
+}
+
+.form-img{
+    
+    float: left;
+    margin-left:3%;
+}
+
+.img-login{
+    border-radius: 0 30px 30px 0;
+    width:455.9px;
+    height:450px;
+    margin-top: -125px;
+    margin-left: 56px;
+}
+
+@media screen and (max-width: 768px) {
+    .img-login{
+        display:none;
+    }
+    .login-logo{
+        margin-left:36%;
+        margin-top: 7%;
+    }
+
+    .form{
+        margin-left:23%;
+        margin-top:8%;
+        width:180px;
+    }
+    
+    .btn-log{
+        margin-top:10%;
+    }
+
+    .btn-signup {
+        margin-top: -21%;
+        margin-left: 56%;
+  }
+}

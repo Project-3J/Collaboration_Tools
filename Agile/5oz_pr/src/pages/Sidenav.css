@@ -1,0 +1,68 @@
+.sidenav {
+    width: 120px;
+    height: 100vh;
+    position: fixed;
+    padding: 0px;
+    /* 상하, 좌우 */
+    box-shadow: 1px 1px 10px #e4e6ea;
+    box-sizing: border-box;
+    transition: width 0.2s ease-in-out;
+}
+
+.close {
+    width: 30px;
+    height: 100vh;
+    border: solid 0.7px gainsboro;
+}
+
+.close a{
+    display:none;
+}
+
+.sidenav ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
+.sidenav a {
+    text-decoration: none;
+    color: rgb(62, 62, 62);
+    
+}
+
+.sidenav-list {
+    margin-top: 50%;
+    margin-left: 1%;
+    padding: 1%;
+    font-size: 17px;
+}
+
+.sidenav li:hover{
+    background-color:skyblue;
+    border-radius: 15px;
+   
+    
+}
+
+.sidenav-icon {
+
+   margin-left: 30px;
+}
+
+.sidenav-text {
+    margin-left: 20px;
+}
+
+.sidenav-arrow {
+    position: absolute;
+    right:-14px;
+    top: 6%;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(180, 180, 180);
+    border-radius: 50%;
+    color:rgb(255, 255, 255);
+    font-size: 28px;
+
+}
