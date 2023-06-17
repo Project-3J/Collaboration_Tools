@@ -1,16 +1,34 @@
-import './Header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Header.css';
 import Nav from 'react-bootstrap/Nav';
 import { BsFillBellFill } from "react-icons/bs";
 import { BsFillGearFill } from "react-icons/bs";
 import { FaHatWizard, FaUser} from "react-icons/fa";
-import React,{useState} from 'react';
+import {useState} from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
+
+
 
 function Header() {
 
-  const [modal, setModal] = useState(false);
-  
+  // const [modal, setModal] = useState(false);
+  const [dropbox, setDropBox] = useState(false);
 
+  // function DropDownList(){
+  //   return(
+  //     <div className='dropdownlist'>
+  //       <ul>
+  //         <li>5oz에 사용자초대</li>
+  //         <li>팀 만들기</li>
+  //       </ul>
+  //     </div>
+  //   );
+  // };
+
+  // function ShowDropDown(){
+  //   setDropBox(!dropbox);
+  // };
+  
   return (
     <Nav className ="nav-all">
       <Nav.Item>
@@ -23,11 +41,22 @@ function Header() {
         <Nav.Item>
           <Nav.Link className='nav-type-text'>프로젝트</Nav.Link>
         </Nav.Item>
-        <Nav.Item>
-          <Nav.Link className='nav-type-text'>팀</Nav.Link>
-        </Nav.Item>
-        
-
+        {/* <Nav.Item>
+          <Nav.Link className='nav-type-text' onClick = {ShowDropDown}>
+            팀
+          </Nav.Link>
+          {dropbox && <DropDownList/>}
+        </Nav.Item> */}
+        <Dropdown>
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            팀
+          </Dropdown.Toggle>
+            <Dropdown.Menu className='dropdownlist'>
+              <Dropdown.Item href="#/action-1">5oz에 사용자 초대</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">팀 만들기</Dropdown.Item>
+            </Dropdown.Menu>
+        </Dropdown>
+      
         <Nav className ='nav-setting'>
           <Nav.Item className = "nav-icon">
             <BsFillBellFill/>
@@ -44,16 +73,16 @@ function Header() {
           <Nav.Item className = "nav-icon">
             <FaUser/>
           </Nav.Item> */}
-          <Nav.Item>
+          {/* <Nav.Item>
             <Nav.Item >
-              {/* <div onClick={()=> {modal === true ? setModal(false) : setModal(true)}}>
+              <div onClick={()=> {modal === true ? setModal(false) : setModal(true)}}>
                 계정
-              </div> */}
-              {/* <div>
+              </div>
+              <div>
                 {modal === true ? <Modal/> : null}
-              </div> */}
+              </div>
             </Nav.Item>
-          </Nav.Item>
+          </Nav.Item> */}
         </Nav>
       </Nav>
     </Nav>
@@ -61,14 +90,13 @@ function Header() {
 }
 
 
-function Modal(){
-  return(
-    <div className='modal-logout'>
-      로그아웃
-    </div>
+// function Modal(){
+//   return(
+//     <div className='modal-logout'>
+//       로그아웃
+//     </div>
 
-  )
-}
-
+//   )
+// }
 
 export default Header;
