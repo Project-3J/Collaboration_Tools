@@ -44,9 +44,6 @@
     
 }
 
-.nav-logo {
-    
-}
 
 .nav-type {
     display: flex;
@@ -65,7 +62,16 @@
     font-size: 18px;
 }
 
+
 .modal-logout {
     margin-top: 30px;
     border: solid 1px gray;
+}
+
+
+#dropdown-basic{
+    background-color: #fbfaf6;
+    color:#6c757d;
+    border: solid 1px #fbfaf6; 
+    font-size: 18px;
 }
