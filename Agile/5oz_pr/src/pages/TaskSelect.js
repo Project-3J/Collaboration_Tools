@@ -43,7 +43,7 @@ function TaskSelect() {
   return (
     <div className="taskselect-container">
       <div className="taskselect-header-container">
-        <div className="header-text">테스크</div>
+        <div className="taskselect-header-text">테스크</div>
         <button className="header-btncrt" onClick={navigateTaskCreate}>
           테스크 만들기
         </button>
