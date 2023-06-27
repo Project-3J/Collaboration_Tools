@@ -6,28 +6,22 @@ import { BsFillGearFill } from "react-icons/bs";
 import { FaHatWizard, FaUser} from "react-icons/fa";
 import {useState} from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
-
+import Modal from 'react-bootstrap/Modal'; 
 
 
 function Header() {
 
-  // const [modal, setModal] = useState(false);
-  const [dropbox, setDropBox] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
-  // function DropDownList(){
-  //   return(
-  //     <div className='dropdownlist'>
-  //       <ul>
-  //         <li>5oz에 사용자초대</li>
-  //         <li>팀 만들기</li>
-  //       </ul>
-  //     </div>
-  //   );
-  // };
+  const handleShowModal  = () => {
+    setShowModal(true);
+  };
 
-  // function ShowDropDown(){
-  //   setDropBox(!dropbox);
-  // };
+  const handleCloseModal = () => {
+    setShowModal(false);
+  }
+
+
   
   return (
     <Nav className ="nav-all">
@@ -52,7 +46,7 @@ function Header() {
             팀
           </Dropdown.Toggle>
             <Dropdown.Menu className='dropdownlist'>
-              <Dropdown.Item href="#/action-1">5oz에 사용자 초대</Dropdown.Item>
+              <Dropdown.Item onClick = {handleShowModal}>5oz에 사용자 초대</Dropdown.Item>
               <Dropdown.Item href="#/action-2">팀 만들기</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
@@ -85,7 +79,25 @@ function Header() {
           </Nav.Item> */}
         </Nav>
       </Nav>
-    </Nav>
+      {/* Modal component */}
+        <Modal show={showModal}>
+          <Modal.Header onClick={handleCloseModal} closeButton >
+            <Modal.Title>5oz에 사용자 초대</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>이메일을 입력해주세요.</p>
+            <input className='header-team-input' type='text' placeholder='ex) dhomp7730@gmail.com'></input>
+          </Modal.Body>
+          <Modal.Footer>
+            {/* Add modal footer content here */}
+            {/* Example: */}
+            <button onClick>추가</button>
+          </Modal.Footer>
+        </Modal>
+
+        </Nav>
+
+    
   );
 }
 
